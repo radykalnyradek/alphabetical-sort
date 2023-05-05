@@ -18,6 +18,15 @@ sortBtn.addEventListener("click", () => {
   });
 });
 
+infoIcon.addEventListener("mousemove", (event) => {
+  const iconOffSetTop = infoIcon.offsetTop;
+  const iconOffSetLeft = infoIcon.offsetLeft;
+  const xPos = event.offsetX;
+  const yPos = event.offsetY;
+  infoWindow.style.left = iconOffSetLeft + xPos + "px";
+  infoWindow.style.top = iconOffSetTop + yPos + "px";
+});
+
 function sortText(inputElement, outputElement) {
   const text = inputElement.value;
   const array = text.trim().split("\n");

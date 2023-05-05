@@ -39,9 +39,7 @@ main {
 }
 
 .heading-info i {
-  margin-left: 10px;
   font-size: 20px;
-  cursor: pointer;
 }
 
 .info-window {
@@ -49,12 +47,35 @@ main {
 }
 
 .show-info {
-  position: fixed;
+  position: absolute;
+  margin-left: 10px;
+  cursor: pointer;
   height: 100px;
-  width: 100px;
-  background-color: gray;
+  width: 150px;
+  background-color: rgb(218, 218, 218);
+  border: 1px solid #949494;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-  transform: translate(var(--x));
+  animation: popup 0.2s;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 h4 {
@@ -79,10 +100,6 @@ textarea {
   border: none;
   font-size: 14px;
   background-color: #fefcff;
-
-  -webkit-box-shadow: 8px 8px 24px 0px rgba(233, 233, 233, 1);
-  -moz-box-shadow: 8px 8px 24px 0px rgba(233, 233, 233, 1);
-  box-shadow: 8px 8px 24px 0px rgba(233, 233, 233, 1);
 }
 
 .sort-button {
@@ -97,4 +114,43 @@ textarea {
 .sort-button:hover {
   background-color: #42414d;
   color: #fefcff;
+}
+
+/* Shadows */
+
+textarea,
+button {
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(233, 233, 233, 1);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(233, 233, 233, 1);
+  box-shadow: 8px 8px 24px 0px rgba(233, 233, 233, 1);
+
+  transition: all 0.4s;
+}
+
+textarea:hover,
+button:hover {
+  -webkit-box-shadow: 8px 8px 24px 0px rgb(211, 211, 211);
+  -moz-box-shadow: 8px 8px 24px 0px rgb(211, 211, 211);
+  box-shadow: 8px 8px 24px 0px rgb(211, 211, 211);
+}
+
+/* ScrollBars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #949494 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #949494;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
 }
