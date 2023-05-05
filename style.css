@@ -42,6 +42,10 @@ main {
   font-size: 20px;
 }
 
+.heading-info i:hover {
+  cursor: pointer;
+}
+
 .info-window {
   display: none;
 }
@@ -79,6 +83,7 @@ main {
 }
 
 h4 {
+  font-size: 1.2rem;
   text-shadow: 4px 4px 6px rgba(187, 187, 187, 1);
 }
 
@@ -95,11 +100,15 @@ textarea {
   height: 60vh;
   width: 70%;
   resize: none;
-  border-radius: 7px;
+  border-radius: 10px;
   padding: 15px 10px;
   border: none;
   font-size: 14px;
   background-color: #fefcff;
+}
+
+textarea:focus {
+  outline: none;
 }
 
 .sort-button {
