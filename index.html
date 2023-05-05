@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Alphabetical Sort</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sort your text alphabetically</h1>
+    </header>
+    <main>
+      <div class="input-container">
+        <div class="heading-info">
+          <h4>Put your text here:</h4>
+          <i class="fa-solid fa-circle-info information-icon"></i>
+          <div class="info-window"></div>
+        </div>
+        <textarea name="input" id="input-area" cols="30" rows="10"></textarea>
+      </div>
+      <div class="button-container">
+        <button class="sort-button">
+          <i class="fa-solid fa-arrow-right fa-2xl"></i>
+        </button>
+      </div>
+      <div class="output-container">
+        <div class="heading-info">
+          <h4>Sorted text:</h4>
+        </div>
+        <textarea
+          name="output"
+          id="output-area"
+          cols="30"
+          rows="10"
+          readonly
+        ></textarea>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
